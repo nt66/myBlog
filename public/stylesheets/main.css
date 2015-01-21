@@ -1,0 +1,71 @@
+/*!
+ * local css for blog
+ * HLF
+ *20141226
+ */
+
+ *{
+ 	padding: 0;
+ 	margin: 0;
+ }
+ body{
+	background-attachment: fixed;
+	background-color: #fff;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;
+	color: #fff;
+ }
+
+ .navbar-blog{
+	background-color: rgba(0,0,0,.8);
+	margin-bottom: 40px;
+ }
+
+ .navbar-blog .navbar-nav {
+	margin: 0 auto;
+	display: table;
+	table-layout: fixed;
+	float: none;
+}
+.hear-blog{
+	text-align: center;
+	margin-bottom: 90px;
+}
+.black{
+	color: #000;
+	background-color: rgba(255,255,255,.8);
+}
+
+.tag-sidebar .tag-item{
+	display: block;
+	position: relative;
+	padding: 10px 15px;
+	border-radius: 0;
+	background: rgba(30,30,30,.6);
+	color: #da6426;
+	border: 0;
+	margin-bottom: 1px;
+}
+.tag-sidebar .tag-item:hover{
+	background: rgba(20,20,20,.6);
+}
+
+.tag-sidebar .tag-item>.post-count{
+	float: right;
+	display: inline-block;
+	min-width: 10px;
+	padding: 3px 7px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 10px;
+	background: rgba(30,30,30,.8);
+	color: #aaa;
+}
+.red{
+	color:red;
+}

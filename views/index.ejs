@@ -1,0 +1,12 @@
+<% include header %>
+<div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-push-2">
+          <% for(var i = 0;i<data.ds.length;++i){ %>
+          <div class="jumbotron black">
+            <h1><%= data.ds[i].title %></h1>
+            <p><%= data.ds[i].content %></p>
+          </div>
+          <% } %>
+        </div>
+<% include footer %>

@@ -1,0 +1,71 @@
+<% include header %>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <form role="form" method="post" id="addForm" style="display:block">
+        <div class="form-group">
+          <label for="loginID">登录ID</label>
+          <input type="text" class="form-control" id="loginID" name="loginID" placeholder="Enter login ID">
+        </div>
+        <div class="form-group">
+          <label for="name">姓名</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="pwd">密码</label>
+          <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="rpwd">密码确认</label>
+          <input type="password" class="form-control" id="rpwd" name="rpwd" placeholder="repeat Password">
+        </div>
+        <input type="text" class="form-control sr-only" name="type" value="add">
+        <button type="submit" class="btn btn-primary">添加新管理员</button>
+     </form>
+     <form role="form" method="post" id="editForm" style="display:none" >
+        <div class="form-group">
+          <label for="xh">序号</label>
+          <input type="text" class="form-control" id="xh" name="xh" readonly>
+        </div>
+        <div class="form-group">
+          <label for="loginID">登录ID</label>
+          <input type="text" class="form-control" id="loginID" name="loginID" placeholder="Enter login ID">
+        </div>
+        <div class="form-group">
+          <label for="name">姓名</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+        </div>
+        <input type="text" class="form-control sr-only" name="type" value="edit">
+        <button type="submit" class="btn btn-danger">修改</button>
+     </form>
+
+      <h2 class="sub-header">用户列表</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>账号</th>
+              <th>姓名</th>
+              <th>注册日期</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% for(var i=0;i<data.ds.length;i++) {%>
+            <tr>
+              <td name="xh"><%= data.ds[i].id %></td>
+              <td><%= data.ds[i].loginID %></td>
+              <td><%= data.ds[i].name %></td>
+              <td><%= data.ds[i].date %></td>
+              <td><a href="#" val="<%=data.ds[i].loginID%>" class="admEdit red">编辑</a> <a href="#" val="<%=data.ds[i].loginID%>" class="admDel red">删除</a></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    </div>
+    <% include footer %>
+    <% include admIcd %>
+  </body>
+</html>
